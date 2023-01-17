@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "a5dd2675-b298-42a2-b306-ea0d17b04ea6",
+		"name": "mongoTemplate-criteria-query",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crud",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Cena\",\r\n    \"age\": 30,\r\n    \"gender\": \"MALE\",\r\n    \"mobile\": \"+261341234568\",\r\n    \"emailId\": \"test@gmail.com\",\r\n    \"profession\": \"Développeur\",\r\n    \"pinCode\": \"123456\",\r\n    \"roles\": [\r\n        \"USER\",\r\n        \"ADMIN\",\r\n        \"MANAGER\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveAllUsers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"firstName\": \"John\",\r\n        \"lastName\": \"Cena\",\r\n        \"age\": 30,\r\n        \"gender\": \"MALE\",\r\n        \"mobile\": \"+261341234568\",\r\n        \"emailId\": \"test@gmail.com\",\r\n        \"profession\": \"Développeur\",\r\n        \"pinCode\": \"123456\",\r\n        \"roles\": [\r\n            \"USER\",\r\n            \"ADMIN\",\r\n            \"MANAGER\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"Nivin\",\r\n        \"lastName\": \"lest\",\r\n        \"age\": 35,\r\n        \"gender\": \"MALE\",\r\n        \"mobile\": \"+261341234502\",\r\n        \"emailId\": \"test02@gmail.com\",\r\n        \"profession\": \"Marketing\",\r\n        \"pinCode\": \"123402\",\r\n        \"roles\": [\r\n            \"USER\",\r\n            \"ADMIN\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"Raja\",\r\n        \"lastName\": \"Sekar\",\r\n        \"age\": 30,\r\n        \"gender\": \"MALE\",\r\n        \"mobile\": \"+261341234504\",\r\n        \"emailId\": \"test04@gmail.com\",\r\n        \"profession\": \"Manager\",\r\n        \"pinCode\": \"123404\",\r\n        \"roles\": [\r\n            \"ADMIN\",\r\n            \"MANAGER\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"Rajabali\",\r\n        \"lastName\": \"Abdul\",\r\n        \"age\": 45,\r\n        \"gender\": \"MALE\",\r\n        \"mobile\": \"+261341234505\",\r\n        \"emailId\": \"test05@gmail.com\",\r\n        \"profession\": \"Artist\",\r\n        \"pinCode\": \"123405\",\r\n        \"roles\": [\r\n            \"USER\",\r\n            \"ADMIN\",\r\n            \"MANAGER\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"Dalvis\",\r\n        \"lastName\": \"Devi\",\r\n        \"profession\": \"Psychiatrist Doctor\",\r\n        \"age\": 35,\r\n        \"gender\": \"FEMALE\",\r\n        \"mobile\": \"+261341234506\",\r\n        \"emailId\": \"test06@gmail.com\",\r\n        \"pinCode\": \"123406\",\r\n        \"roles\": [\r\n            \"USER\",\r\n            \"ADMIN\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"Backari\",\r\n        \"lastName\": \"Baskar\",\r\n        \"profession\": \"CPS\",\r\n        \"age\": 35,\r\n        \"gender\": \"MALE\",\r\n        \"mobile\": \"+261341234507\",\r\n        \"emailId\": \"test07@gmail.com\",\r\n        \"pinCode\": \"123407\",\r\n        \"roles\": [\r\n            \"ADMIN\",\r\n            \"MANAGER\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"My\",\r\n        \"lastName\": \"Zanu\",\r\n        \"profession\": \"QA\",\r\n        \"age\": 28,\r\n        \"gender\": \"FEMALE\",\r\n        \"mobile\": \"+261341234508\",\r\n        \"emailId\": \"test08@gmail.com\",\r\n        \"pinCode\": \"123408\",\r\n        \"roles\": [\r\n            \"USER\",\r\n            \"ADMIN\",\r\n            \"MANAGER\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"F_Name\",\r\n        \"lastName\": \"Yasar\",\r\n        \"profession\": \"Architect Développeur\",\r\n        \"age\": 40,\r\n        \"gender\": \"MALE\",\r\n        \"mobile\": \"+261341234568\",\r\n        \"emailId\": \"test@gmail.com\",\r\n        \"pinCode\": \"123456\",\r\n        \"roles\": [\r\n            \"USER\",\r\n            \"ADMIN\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"Dev\",\r\n        \"lastName\": \"Darvin\",\r\n        \"profession\": \"Teacher\",\r\n        \"age\": 50,\r\n        \"gender\": \"MALE\",\r\n        \"mobile\": \"+261341234509\",\r\n        \"emailId\": \"test09@gmail.com\",\r\n        \"pinCode\": \"123409\",\r\n        \"roles\": [\r\n            \"USER\",\r\n            \"ADMIN\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"First\",\r\n        \"lastName\": \"Zanu\",\r\n        \"profession\": \"Fashion Designer\",\r\n        \"age\": 28,\r\n        \"gender\": \"FEMALE\",\r\n        \"mobile\": \"+261341234510\",\r\n        \"emailId\": \"test10@gmail.com\",\r\n        \"pinCode\": \"123410\",\r\n        \"roles\": [\r\n            \"ADMIN\",\r\n            \"MANAGER\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"Tj\",\r\n        \"lastName\": \"Devi\",\r\n        \"profession\": \"Psychiatrist Doctor\",\r\n        \"age\": 35,\r\n        \"gender\": \"FEMALE\",\r\n        \"mobile\": \"+261341234511\",\r\n        \"emailId\": \"test@gmail.com\",\r\n        \"pinCode\": \"123411\",\r\n        \"roles\": [\r\n            \"USER\",\r\n            \"ADMIN\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"Zoa\",\r\n        \"lastName\": \"Baskar\",\r\n        \"profession\": \"Engineer\",\r\n        \"age\": 35,\r\n        \"gender\": \"MALE\",\r\n        \"mobile\": \"+261341234512\",\r\n        \"emailId\": \"test12@gmail.com\",\r\n        \"pinCode\": \"123412\",\r\n        \"roles\": [\r\n            \"USER\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"ILY\",\r\n        \"lastName\": \"Yasar\",\r\n        \"profession\": \"Architect\",\r\n        \"age\": 40,\r\n        \"gender\": \"MALE\",\r\n        \"mobile\": \"+261341234513\",\r\n        \"emailId\": \"test13@gmail.com\",\r\n        \"pinCode\": \"113356\",\r\n        \"roles\": [\r\n            \"USER\",\r\n            \"ADMIN\",\r\n            \"MANAGER\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"Johna\",\r\n        \"lastName\": \"Abdul\",\r\n        \"profession\": \"Doctor\",\r\n        \"age\": 45,\r\n        \"gender\": \"MALE\",\r\n        \"mobile\": \"+261341234514\",\r\n        \"emailId\": \"test@gmail.com\",\r\n        \"pinCode\": \"122456\",\r\n        \"roles\": [\r\n            \"USER\",\r\n            \"ADMIN\"\r\n        ]\r\n    },\r\n    {\r\n        \"firstName\": \"Jo\",\r\n        \"lastName\": \"Antony\",\r\n        \"profession\": \"Teacher\",\r\n        \"age\": 50,\r\n        \"gender\": \"FEMALE\",\r\n        \"mobile\": \"+261341234515\",\r\n        \"emailId\": \"test15@gmail.com\",\r\n        \"pinCode\": \"113056\",\r\n        \"roles\": [\r\n            \"USER\",\r\n            \"ADMIN\"\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/users/saveAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users",
+								"saveAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"05560df5-7268-4ba9-871d-7827353277ac\",\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Cena\",\r\n    \"age\": 45,\r\n    \"gender\": \"MALE\",\r\n    \"mobile\": \"+261341234568\",\r\n    \"emailId\": \"test@gmail.com\",\r\n    \"profession\": \"Développeur\",\r\n    \"pinCode\": \"123456\",\r\n    \"roles\": [\r\n        \"USER\",\r\n        \"ADMIN\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/users/05560df5-7268-4ba9-871d-7827353277ac",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users",
+								"05560df5-7268-4ba9-871d-7827353277ac"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsersByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/users/byName?name=Cena",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users",
+								"byName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Cena"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/users/05560df5-7268-4ba9-871d-7827353277ac",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users",
+								"05560df5-7268-4ba9-871d-7827353277ac"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "existByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/users/existByName?name=Cena",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users",
+								"existByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Cena"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchUserProfile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/users/search?input=John",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "input",
+									"value": "John"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "find_queries",
+			"item": [
+				{
+					"name": "findByLastName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "operators",
+			"item": []
+		},
+		{
+			"name": "regex_sorting",
+			"item": []
+		}
+	]
+}
